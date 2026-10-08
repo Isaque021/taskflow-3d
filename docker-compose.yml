@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: taskflow-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: taskflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - taskflow-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  taskflow-postgres-data:
