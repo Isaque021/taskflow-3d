@@ -1,3 +1,4 @@
+import { HolographicSphere } from "./HolographicSphere";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import type { FormEvent } from "react";
@@ -41,12 +42,39 @@ export function LoginPage() {
   return (
     <div className="auth-page">
       <div className="auth-panel auth-intro">
-        <span className="brand-mark large">T</span>
-        <span className="eyebrow">Organize o que importa</span>
-        <h1>Menos ruído.<br />Mais realização.</h1>
-        <p>Uma visão clara do trabalho da sua equipe, do primeiro passo até a última tarefa concluída.</p>
+        <HolographicSphere />
+
+        <div className="brand-heading">
+          <span className="brand-mark large">T</span>
+
+          <div className="brand-name">
+            <strong>Taskflow</strong>
+            <span>FUTURE OF PRODUCTIVITY</span>
+          </div>
+        </div>
+
+        <span className="eyebrow">
+          ORGANIZE. EVOLUA. CONCLUA.
+        </span>
+
+        <div className="holo-title">
+          <h1>
+            Suas tarefas.
+            <br />
+            <span>Outra dimensão.</span>
+          </h1>
+        </div>
+
+        <p>
+          Organize suas tarefas, acompanhe seu progresso
+          e mantenha sua equipe alinhada em um só lugar.
+        </p>
+
         <div className="intro-line" />
-        <span className="small-note">Um espaço simples para fazer acontecer.</span>
+
+        <span className="small-note">
+          Planeje. Execute. Conclua.
+        </span>
       </div>
       <div className="auth-panel auth-form-panel">
         <div className="auth-form-wrap">
